@@ -1,0 +1,15 @@
+[submodule "vendor/symfony"]
+	path = vendor/symfony
+	url = http://github.com/symfony/symfony.git
+[submodule "vendor/twig"]
+	path = vendor/twig
+	url = http://github.com/fabpot/Twig
+[submodule "vendor/monolog"]
+	path = vendor/monolog
+	url = http://github.com/Seldaek/monolog
+[submodule "vendor/assetic"]
+	path = vendor/assetic
+	url = https://github.com/kriswallsmith/assetic
+[submodule "vendor/bundles/Symfony/Bundle/AsseticBundle"]
+	path = vendor/bundles/Symfony/Bundle/AsseticBundle
+	url = https://github.com/symfony/AsseticBundle.git

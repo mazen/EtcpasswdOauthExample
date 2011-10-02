@@ -1,0 +1,33 @@
+imports:
+    - { resource: parameters.ini }
+    - { resource: security.yml }
+    
+framework:
+  esi: ~
+  translator: {fallback: %locale%}
+  secret: %secret%
+  charset: UTF-8
+  router: { resource "%kernel.root_dir%/config/routing.xml" }
+  form: true
+  csrf_protection: true
+  validation: ~
+  templating: { engines: ['twig'] }
+  session:
+    default_locale: %locale%
+    auto_start: true
+    
+
+assetic:
+  debug:  %kernel.debug%
+  use_controller: %kernel.debug%
+
+  filters:
+    compass:
+      images_dir: %kernel.root_dir%/../web
+      http_images_path: /
+      
+
+# Twig Configuration
+twig:
+  debug: %kernel.debug%
+  strict_variables: %kernel.debug%
