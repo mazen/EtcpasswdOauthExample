@@ -1,15 +1,45 @@
 security:
-  
   firewalls:
     main:
+      anonymous: true
+      logout: true
       pattern: ^/
-      anonymous: ~
-      form_login: ~
+
+      oauth_github:
+        auth_provider: "github"
+        client_id:     %github.client_id%
+        client_secret: %github.secret%
+        scope: repo,user
+        login_path: /login/github
+        check_path: /auth/github
+        failure_path:  /
   
+      oauth_facebook:
+        auth_provider: "facebook"
+        client_id:     %facebook.client_id%
+        client_secret: %facebook.secret%
+        scope:         ""
+        login_path:    /login/facebook
+        check_path:    /auth/facebook
+        failure_path:  /
+  
+      oauth_google:
+        auth_provider: "google"
+        client_id:     %google.client_id%
+        client_secret: %google.secret%
+        scope:         "https://www.googleapis.com/auth/plus.me"
+        login_path:    /login/google
+        check_path:    /auth/google
+        failure_path:  /
+
   role_hierarchy:
     ROLE_ADMIN: [ROLE_USER]
       
   providers:
     main:
+      id: etcpasswd_oauth.user.provider
       
   access_control: ~  
+
+  factories:
+    - "%kernel.root_dir%/../vendor/bundles/Etcpasswd/OAuthBundle/Resources/config/security_factories.xml"

@@ -13,3 +13,9 @@
 [submodule "vendor/bundles/Symfony/Bundle/AsseticBundle"]
 	path = vendor/bundles/Symfony/Bundle/AsseticBundle
 	url = https://github.com/symfony/AsseticBundle.git
+[submodule "vendor/bundles/Etcpasswd/OAuthBundle"]
+	path = vendor/bundles/Etcpasswd/OAuthBundle
+	url = git@github.com:mazen/EtcpasswdOAuthBundle.git
+[submodule "vendor/buzz"]
+	path = vendor/buzz
+	url = http://github.com/kriswallsmith/Buzz.git

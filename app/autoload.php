@@ -8,9 +8,11 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 $loader = new UniversalClassLoader();
 $loader -> registerNamespaces(array(
     'Symfony'                         => array($vendors.'/symfony/src', $vendors.'/bundles'),
+    'Etcpasswd'                       => $vendors.'/bundles',
     
+    'Buzz'                            => $vendors.'/buzz/lib',
     'Assetic'                         => $vendors.'/assetic/src',
-    'Monolog'                         => $vendors.'/monolog/src',    
+    'Monolog'                         => $vendors.'/monolog/src',
 ));
 
 $loader -> registerPrefixes(array(

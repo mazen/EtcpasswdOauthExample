@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    {% if app.user != null %}
+        <h1>Hi, {{app.user.username}}!</h1>
+        <p>Your token is "{{app.security.token.getAttribute('access_token')}}" because you authenticated using "{{app.security.token.getAttribute('via')}}"</p>
+        <p><a href="/logout">Logout</a></p>
+    {% else %}
+        <h1>Not logged in</h1>
+        <p>Log in via <a href="/login/github">Github</a> | <a href="/login/facebook">Facebook</a> | <a href="/login/google">Google+</a></p>
+    
+    {% endif %}
+{% endblock %}

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <routes xmlns="http://symfony.com/schema/routing"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
-    
-    <import type="assetic" resource="." />
-    
-    <import resource="@MazenTestBundle/Resources/config/routing.xml" />
+
+
+    <route pattern="/" id="mazen_test_homepage">
+        <default key="_controller">MazenTestBundle:Index:index</default>    
+    </route>
 </routes>
